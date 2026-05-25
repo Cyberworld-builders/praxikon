@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Cyberworld-builders/praxikon/schema/annotation.schema.json",
+  "title": "Praxis annotation",
+  "description": "A reference, embedded in source code as a comment, pointing at a canonical Praxikon concept. The host language's comment syntax wraps the structured form below. The on-the-wire form is plain text; this schema describes the parsed/normalized object.",
+  "type": "object",
+  "required": ["concept"],
+  "additionalProperties": false,
+  "properties": {
+    "concept": {
+      "type": "string",
+      "description": "The stable ID of the canonical concept (kebab-case noun phrase, max ~5 words). Must match a file in concepts/.",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "examples": [
+        "security-definer-rls-helpers",
+        "mean-of-means-vs-pooled-mean",
+        "null-coalesce-to-zero-in-aggregation"
+      ]
+    },
+    "variant": {
+      "type": "string",
+      "description": "Optional sub-case for concepts with multiple named variants. Appears after `#` in the source-code comment form.",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "examples": ["strong-parameters", "priority-ordered-terminals"]
+    },
+    "audit": {
+      "type": "string",
+      "description": "Optional free-text audit flag for findings that need follow-up. Appears after `! audit:` in the source-code comment form. Audit tooling can grep for `! audit:` to surface flagged sites.",
+      "examples": ["column-ownership-only-at-api-layer", "doc-vs-impl-drift"]
+    },
+    "preview": {
+      "type": "string",
+      "description": "1-3 lines of plain English in canonical lexicon explaining why this concept applies here. For the human reader skimming the source; the canonical content lives in concepts/.",
+      "maxLength": 400
+    },
+    "location": {
+      "type": "object",
+      "description": "Source location of the annotation (added by tooling that extracts annotations; not authored by hand).",
+      "additionalProperties": false,
+      "properties": {
+        "file": { "type": "string" },
+        "line": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}

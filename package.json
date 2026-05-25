@@ -1,0 +1,35 @@
+{
+  "name": "@cyberworld/praxikon",
+  "version": "0.1.0",
+  "description": "An open knowledge corpus for senior software engineering — concepts named in canonical terms, indexed for citation from production code. \"Generating lexicon from praxis in production.\"",
+  "license": "MIT",
+  "author": "Jay Long <jay@cyberworldbuilders.com>",
+  "homepage": "https://github.com/Cyberworld-builders/praxikon",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyberworld-builders/praxikon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cyberworld-builders/praxikon/issues"
+  },
+  "keywords": [
+    "knowledge-base",
+    "engineering-curriculum",
+    "code-review",
+    "leetcode",
+    "interview-prep",
+    "agent-tooling",
+    "claude",
+    "canonical-vocabulary",
+    "praxis"
+  ],
+  "files": [
+    "concepts/",
+    "indexes/",
+    "schema/",
+    "skills/",
+    "README.md",
+    "LICENSE"
+  ],
+  "private": false
+}
