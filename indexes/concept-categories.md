@@ -57,6 +57,41 @@ A canonical checklist of computer-science and software-engineering concept categ
 | 29 | Mass-assignment defense | strong parameters; allow-list at the API boundary | OWASP top 10 family | ⬜ |
 | 30 | Fail-closed routing / defense in depth | layered authorization gates | (systems) | ⬜ |
 | 31 | Documented-invariant drift | contract-vs-implementation gap | governance / testing, not LC | ⬜ |
+| 32 | Browser feature deny-by-default | Permissions-Policy; CSP family; capability gating | web security headers | ✅ [permissions-policy-feature-gating](../concepts/permissions-policy-feature-gating.md) |
+
+## Web / SEO / frontend correctness
+
+| # | Category | Canonical name | Notes | Canon |
+|---|---|---|---|---|
+| 33 | Internal links to redirected slugs | indirection collapse at source; link-equity preservation | SEO + perf, recurring | ✅ [internal-links-bypass-redirect-hops](../concepts/internal-links-bypass-redirect-hops.md) |
+| 34 | Responsive image sizes accuracy | sizes vs srcset variant selection; trust the heuristic | frontend perf, counterintuitive | ✅ [accurate-sizes-attribute-for-responsive-images](../concepts/accurate-sizes-attribute-for-responsive-images.md) |
+| 35 | Structured data / schema.org coverage | JSON-LD; type-by-page-role | SEO surface | ⬜ |
+| 36 | Sitemap / robots / canonical URLs | crawl-graph hygiene | SEO surface | ⬜ |
+
+## Frontend perf / critical path
+
+| # | Category | Canonical name | Notes | Canon |
+|---|---|---|---|---|
+| 37 | Priority-hint saturation | "everything urgent = nothing urgent"; entropy of priority signal | universal across schedulers | ✅ [priority-hint-saturation](../concepts/priority-hint-saturation.md) |
+| 38 | Interaction-deferred third-party scripts | lazyOnload pattern; isolating vendor JS from LCP/INP windows | recurring across content sites | ✅ [interaction-deferred-third-party-script-loading](../concepts/interaction-deferred-third-party-script-loading.md) |
+| 39 | LCP discovery + measurement | Core Web Vitals; field vs lab data | Lighthouse trace literacy | ⬜ |
+| 40 | bf-cache compatibility | back/forward cache; `unload` vs `pagehide` | navigation perf | ⬜ |
+
+## Accessibility / a11y math
+
+| # | Category | Canonical name | Notes | Canon |
+|---|---|---|---|---|
+| 41 | Color contrast (WCAG AA/AAA) | luminance ratio; deterministic pass/fail thresholds | a11y, objective math | ✅ [wcag-color-contrast-aa](../concepts/wcag-color-contrast-aa.md) |
+| 42 | Keyboard navigability + focus management | focus-visible; trap-prevention; skip links | a11y, interaction | ⬜ |
+| 43 | Semantic HTML + ARIA landmarks | role hierarchy; reading order | a11y, structure | ⬜ |
+| 44 | Forced-colors + prefers-contrast support | system-pref honoring | a11y, user override | ⬜ |
+
+## Hygiene / maintainability
+
+| # | Category | Canonical name | Notes | Canon |
+|---|---|---|---|---|
+| 45 | Dead code preserves stale config | latent footgun; "delete the thing, not just the import" | recurring across cleanups | ⬜ |
+| 46 | Assertion drift (test enforces stale truth) | sibling of documented-invariant-drift (#31) | governance, but in tests | ⬜ |
 
 ## How to use this
 
