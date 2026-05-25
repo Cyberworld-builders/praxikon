@@ -1,6 +1,6 @@
 {
   "name": "@cyberworld/praxikon",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An open knowledge corpus for senior software engineering — concepts named in canonical terms, indexed for citation from production code. \"Generating lexicon from praxis in production.\"",
   "license": "MIT",
   "author": "Jay Long <jay@cyberworldbuilders.com>",
@@ -23,11 +23,22 @@
     "canonical-vocabulary",
     "praxis"
   ],
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "praxikon": "bin/praxikon.mjs"
+  },
+  "scripts": {
+    "postinstall": "node bin/postinstall.mjs"
+  },
   "files": [
     "concepts/",
     "indexes/",
     "schema/",
     "skills/",
+    "bin/",
     "README.md",
     "LICENSE"
   ],
