@@ -1,6 +1,6 @@
 {
   "name": "@cyberworld/praxikon",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "An open knowledge corpus for senior software engineering — concepts named in canonical terms, indexed for citation from production code. \"Generating lexicon from praxis in production.\"",
   "license": "MIT",
   "author": "Jay Long <jay@cyberworldbuilders.com>",

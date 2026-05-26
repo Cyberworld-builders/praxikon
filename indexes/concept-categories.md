@@ -90,7 +90,7 @@ A canonical checklist of computer-science and software-engineering concept categ
 
 | # | Category | Canonical name | Notes | Canon |
 |---|---|---|---|---|
-| 45 | Dead code preserves stale config | latent footgun; "delete the thing, not just the import" | recurring across cleanups | ⬜ |
+| 45 | Dead code preserves stale config | latent footgun; "delete the thing, not just the import" | recurring across cleanups | ✅ [dead-code-as-config-drift-footgun](../concepts/dead-code-as-config-drift-footgun.md) |
 | 46 | Assertion drift (test enforces stale truth) | sibling of documented-invariant-drift (#31) | governance, but in tests | ⬜ |
 
 ## How to use this
