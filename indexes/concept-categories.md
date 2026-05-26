@@ -75,7 +75,7 @@ A canonical checklist of computer-science and software-engineering concept categ
 | 37 | Priority-hint saturation | "everything urgent = nothing urgent"; entropy of priority signal | universal across schedulers | ✅ [priority-hint-saturation](../concepts/priority-hint-saturation.md) |
 | 38 | Interaction-deferred third-party scripts | lazyOnload pattern; isolating vendor JS from LCP/INP windows | recurring across content sites | ✅ [interaction-deferred-third-party-script-loading](../concepts/interaction-deferred-third-party-script-loading.md) |
 | 39 | LCP discovery + measurement | Core Web Vitals; field vs lab data | Lighthouse trace literacy | ⬜ |
-| 40 | bf-cache compatibility | back/forward cache; `unload` vs `pagehide` | navigation perf | ⬜ |
+| 40 | bf-cache compatibility | back/forward cache; `unload` vs `pagehide` | navigation perf | ✅ [bfcache-disqualification-by-unload-listener](../concepts/bfcache-disqualification-by-unload-listener.md) |
 
 ## Accessibility / a11y math
 
